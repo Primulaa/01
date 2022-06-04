@@ -8,6 +8,12 @@
     "short_name": "Short Name PWA",
     "description": "Description PWA",
     "icons": [
+		 {
+ 			"src": "01/maskable_icon512.png",
+ 			"sizes": "512x512",
+ 			"type": "image/png",
+ 			"purpose": "maskable"
+ 		},
         {
             "src": "/01/icon-192x192.png",
             "sizes": "192x192",
