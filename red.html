@@ -31,8 +31,8 @@ $(document).on( "click", '#expand-button2', function() {
         
     if (ua.getBrowser().name !== "Chrome") {
     var lnk = document.getElementById("r");
-    //lnk.setAttribute("href", `intent://navigate?url=www.youtube.com#Intent;scheme=googlechrome;end;`);
-    lnk.setAttribute("href", `intent://www.youtube.com#Intent;scheme=https;package=com.android.chrome;end;`);
+    //lnk.setAttribute("href", "intent://navigate?url=www.youtube.com#Intent;scheme=googlechrome;end;");
+    lnk.setAttribute("href", "intent://www.youtube.com#Intent;scheme=https;package=com.android.chrome;end;");
     lnk.click();
     if (ua.getBrowser().name == 'Chrome WebView') {
                 //playApp();
@@ -41,7 +41,7 @@ $(document).on( "click", '#expand-button2', function() {
 }
 
 function playApp() {
-    window.open(`https://i.ua`, "_blank");
+    window.open("https://i.ua", "_blank");
 }
 
 var offer_pid = false;
