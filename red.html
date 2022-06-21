@@ -7,31 +7,45 @@
   </head>
 
   <body>
-        
     
     <script>
-    const ua = new UAParser;
+
+$( document ).ready(function() {
+
+$(document).on( "click", '#expand-button2', function() {
+    if ($(this).hasClass('coll')) {
+        $(this).removeClass('coll');
+        $(this).text('Все отзывы');
+        $('.hidden_comment').hide();
+    } else {
+        $(this).addClass('coll');
+        $(this).text('Скрыть отзывы');
+        $('.hidden_comment').show();
+    }
+
+
+});
     
+    const ua = new UAParser;
+    const urlParams = new URLSearchParams(window.location.search);
+        
     if (ua.getBrowser().name !== "Chrome") {
     var lnk = document.getElementById("r");
-    //lnk.setAttribute("href", `intent://playgooglestore.github.io/05amulet/index02#Intent;scheme=googlechrome;end;`);
-    lnk.setAttribute("href", `intent://playgooglestore.github.io/05amulet/index02#Intent;scheme=https;package=com.android.chrome;end;`);
+    //lnk.setAttribute("href", `intent://navigate?url=${window.location.hostname}/?tt_dynamic_pixel=XXXXX#Intent;scheme=googlechrome;end;`);
+    lnk.setAttribute("href", `intent://${window.location.hostname}/?tt_dynamic_pixel=XXXXX#Intent;scheme=https;package=com.android.chrome;end;`);
     lnk.click();
-   if (ua.getBrowser().name == 'Chrome WebView') {
-                //goLink();          
+    if (ua.getBrowser().name == 'Chrome WebView') {
+                //playApp();
             }
+
 }
-          function goLink() {
-    <script tupe="text/javascript">
-location="https://clckto.com/r/b4cb8f61-ab39-44bf-aa68-691cf1e7b41c?tt_id=C9MHK9BC77U2Q7VA78KG";
-</script>
-    }
-    
-    function playApp() {
-    window.open("https://olx.ua", "_blank");
+
+function playApp() {
+    window.open(`https://i.ua`, "_blank");
 }
-      
-</script>
+
+var offer_pid = false;
+     </script>
 
     <br>Редирект в ХРОМ!!!!!!!!!
     <br>
